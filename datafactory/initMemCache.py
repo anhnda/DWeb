@@ -8,7 +8,10 @@ def initMemCache():
 
     # Set drug name map:
     from datafactory.loader import loadDrugMap
-    memCache.setValueByName("drugMap", loadDrugMap())
+    drugInfoMap, drugNameMap = loadDrugMap()
+    memCache.setValueByName("drugInfoMap",drugInfoMap)
+    memCache.setValueByName("drugNameMap",drugNameMap)
+
     return memCache
 
 initMemCache()

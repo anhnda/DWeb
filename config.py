@@ -6,3 +6,5 @@ C_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DRUGBANK_FILE = "%s/resource/DrugBankNameX.txt" % C_DIR
 DRUGNAME_MIN_LENGTH = 10
+FULL_DRUGNAME_LIST = False
+INCHIKEY_REQUIRED = True

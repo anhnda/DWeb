@@ -1,150 +1,257 @@
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="author" content="colorlib.com">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet" />
-    <link href="static/css/main.css" rel="stylesheet" />
-    <link href="static/css/custom.css" rel="stylesheet" />
-    <link href="static/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet"/>
+    <link href="/css/main.css" rel="stylesheet"/>
+    <link href="/css/custom.css" rel="stylesheet"/>
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/bootstrap/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
 
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-      <div class="s010">
-      <form>
-        <div class="inner-form">
-          <div class="basic-search">
-            <div class="input-field">
-              <input id="inputDrugName1" type="text" placeholder="Enter Drug Names" />
-              <div class="icon-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="advance-search">
-            <span class="desc">ADVANCED SEARCH</span>
-            <div class="row">
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">Type</option>
-                    <option>Subject b</option>
-                    <option>Subject c</option>
-                  </select>
-                </div>
-              </div>
-              <div class="input-field">
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option placeholder="" value="">Salt</option>
-                    <option>Subject b</option>
-                    <option>Subject c</option>
-                  </select>
-                </div>
-              </div>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-            </div>
-            <div class="row third">
-              <div class="input-field">
-                <div class="result-count">
-                  <span>108 </span>results</div>
-                <div class="group-btn">
-                  <button class="btn-delete" id="delete">RESET</button>
-                  <button class="btn-search" id="search"> Search</button>
-                </div>
-              </div>
-            </div>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
 
+    <!-- Template Main CSS File -->
+<!--    <link href="/assets/css/style.css" rel="stylesheet">-->
+</head>
+<body>
 
-          </div>
-        </div>
-      </form>
-      </div>
-      </div>
-      <div class="row">
-        <div class="row">Result</div>
-        <div class="row" id="result"> </div>
-      </div>
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto"><a href="index.html">JChecker <i class="bi bi-search"></i></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <!--      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>-->
+
     </div>
-    <script src="static/js/extention/choices.js"></script>
-    <script>
-      const customSelects = document.querySelectorAll("select");
-      console.log("Length", customSelects.length)
-      const deleteBtn = document.getElementById('delete')
-      const searchBtn = document.getElementById("search")
-      const choices = new Choices('select',
-      {
-        searchEnabled: false,
-        itemSelectText: '',
-        removeItemButton: true,
-      });
-      for (let i = 0; i < customSelects.length; i++)
-      {
-        customSelects[i].addEventListener('addItem', function(event)
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <div class="row">
+                <div class="s010" style="margin-top: 100px;">
+                    <form>
+                        <div class="inner-form">
+                            <div class="basic-search">
+                                <div class="input-field">
+                                    <input id="inputDrugName1" type="text" placeholder="Enter Drug Names"/>
+                                    <div class="icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24">
+                                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advance-search">
+                                <span class="desc">ADVANCED SEARCH</span>
+                                <div class="row">
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                                <option placeholder="" value="">Type</option>
+                                                <option>Subject b</option>
+                                                <option>Subject c</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-select">
+                                            <select data-trigger="" name="choices-single-defaul">
+                                                <option placeholder="" value="">Condition</option>
+                                                <option>Subject b</option>
+                                                <option>Subject c</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row third">
+                                    <div class="input-field">
+                                        <div class="result-count">
+                                            <!--                  <span>1 </span>results-->
+                                        </div>
+                                        <div class="group-btn">
+                                            <button class="btn-delete" id="delete">RESET</button>
+                                            <button class="btn-search" id="search"> Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="result_section" class="result" style="padding: 0;">
+        <div class="container">
+
+            <div class="row" style="margin-left: 50pt; margin-right:50pt" id="result_row">
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>JChecker</h3>
+                    <p>
+                        Bioinformatics Center <br>
+                        Kyoto University <br>
+                        Kyoto, Uji 611-0011<br>
+                        Japan <br><br>
+                        <strong>Phone:</strong> +81 111 1111 1111<br>
+                        <strong>Web:</strong> +81 111 1111 1111<br>
+
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Join Our Newsletter</h4>
+                    <p>Register to receive the latest news</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+                &copy; Copyright <strong><span>JChecker</span></strong>. All Rights Reserved
+            </div>
+
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<script src="/js/extention/choices.js"></script>
+<script src="/js/main.js"></script>
+
+<script>
+    const customSelects = document.querySelectorAll("select");
+    console.log("Length", customSelects.length)
+    const deleteBtn = document.getElementById('delete')
+    const searchBtn = document.getElementById("search")
+    const choices = new Choices('select',
         {
-          if (event.detail.value)
-          {
-            let parent = this.parentNode.parentNode
-            parent.classList.add('valid')
-            parent.classList.remove('invalid')
-          }
-          else
-          {
-            let parent = this.parentNode.parentNode
-            parent.classList.add('invalid')
-            parent.classList.remove('valid')
-          }
+            searchEnabled: false,
+            itemSelectText: '',
+            removeItemButton: true,
+        });
+    for (let i = 0; i < customSelects.length; i++) {
+        customSelects[i].addEventListener('addItem', function (event) {
+            if (event.detail.value) {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('valid')
+                parent.classList.remove('invalid')
+            } else {
+                let parent = this.parentNode.parentNode
+                parent.classList.add('invalid')
+                parent.classList.remove('valid')
+            }
         }, false);
-      }
-      deleteBtn.addEventListener("click", function(e)
-      {
+    }
+    deleteBtn.addEventListener("click", function (e) {
         e.preventDefault()
         const deleteAll = document.querySelectorAll('.choices__button')
-        for (let i = 0; i < deleteAll.length; i++)
-        {
-          deleteAll[i].click();
+        for (let i = 0; i < deleteAll.length; i++) {
+            deleteAll[i].click();
         }
-      });
-      searchBtn.addEventListener("click", function (e){
+        const searchBox = document.getElementById("inputDrugName1")
+        searchBox.value = ""
+        const rowElemt = document.getElementById("result_row")
+        rowElemt.innerText = ""
+    });
+
+    searchBtn.addEventListener("click", function (e) {
         e.preventDefault()
         makeRequest()
-      })
+    })
 
 
-      function makeRequest() {
-            var httpRequest = new XMLHttpRequest();// Initiatlization of XMLHttpRequest
-            if (!httpRequest) {
-                alert(' Cannot create an XMLHTTP instance');
-                return false;
-            }
-            httpRequest.onreadystatechange = function () {        // ready state event, will be executed once the server send back the data
-                if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                    if (httpRequest.status === 200) {
-                        var r = httpRequest.response
-                        console.log(r)
-                        var r2 = JSON.parse(r)
-                        console.log(r2)
-
-                    } else {
-                        alert('There was a problem with the request.');
-                    }
-                }
-            };
-            var drugName = document.getElementById("inputDrugName1").value
-            console.log(drugName)
-            httpRequest.open('GET', "get/druginfo/"+drugName); // service call
-            httpRequest.send();
+    function makeRequest() {
+        var httpRequest = new XMLHttpRequest();// Initiatlization of XMLHttpRequest
+        if (!httpRequest) {
+            alert(' Cannot create an XMLHTTP instance');
+            return false;
         }
+        httpRequest.onreadystatechange = function () {        // ready state event, will be executed once the server send back the data
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    var r = httpRequest.response
+                    // console.log(r)
+                    var drugInfo = JSON.parse(r)
+                    // console.log(drugInfo)
+                    viewDrugInfo(drugInfo)
+
+                } else {
+                    alert('There was a problem with the request.');
+                }
+            }
+        };
+        var drugName = document.getElementById("inputDrugName1").value
+        console.log(drugName)
+        httpRequest.open('GET', "get/druginfo/" + drugName); // service call
+        httpRequest.send();
+    }
 
 
-    </script>
-    <script src="static/js/autocomplete2.js"></script>
-    <script src="static/bootstrap/js/bootstrap.js"></script>
+</script>
+<script src="/js/autocomplete2.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
 
-  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
