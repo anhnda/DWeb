@@ -39,6 +39,7 @@ function viewDrugInfo(drugInfo) {
 
         tableElemt.appendChild(tbody)
         rowElemt.appendChild(tableElemt)
+        document.getElementById("inputDrugName1").scrollIntoView({block: "start", inline: "nearest"})
     }
 }
 
