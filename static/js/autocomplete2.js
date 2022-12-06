@@ -132,6 +132,8 @@ var drugs = JSON.parse(httpGet("/get/drugs"))
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("inputDrugName1"), drugs);
+autocomplete(document.getElementById("inputDrugName2"), drugs);
+
 /**
  * CREATES OUTPUT LIKE THIS:
  *

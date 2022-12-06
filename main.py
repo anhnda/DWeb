@@ -41,3 +41,6 @@ def get_druginfo(drugname):
         drugInfo = {"drugName": "Not found", "searchName": drugName}
     v = json.dumps(drugInfo)
     return v
+
+if __name__ == "__main__":
+    app.run(threading=True)
